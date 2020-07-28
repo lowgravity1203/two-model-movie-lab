@@ -17,6 +17,9 @@ mongoose.connection.on('connected', () => console.log(`Mongoose connected to ${c
 mongoose.connection.on('disconnected', () => console.log('Mongoose disconnected'))
 mongoose.connection.on('error', (err) => console.log('Mongoose error', err))
 
+app.get('/', (req, res) => {
+    res.render('index.ejs')
+})
 
 app.use('/movies', movieControllers)
 

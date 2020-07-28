@@ -21,9 +21,9 @@
 		<main>
     		<h2>List of Movies</h2>
     		<ul>
-       			 <% for(let i = 0; i < movies.length; i++){ %>
+       			 <% for(let i = 0; i < movie.length; i++){ %>
             		<li>
-                		<a href="/movies/<%=movies[i]._id%>"><%=movies[i].name%><%=movies[i].date%></a>
+                		<a href="/movies/<%=movie[i]._id%>"><%=movie[i].name%><%=movie[i].date%></a>
             		</li>
         		<% } %>
    			 </ul>
