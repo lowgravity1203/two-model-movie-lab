@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<header>
+			<h1>Classic Movies and Actor</h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/actors/new">Add a New Movie</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+    		<h2>List of Actor</h2>
+    		<ul>
+       			 <% for(let i = 0; i < actor.length; i++){ %>
+            		<li>
+                        <a href="/actors/<%=actor[i]._id%>"><%=actor[i].name%><br/></a>
+                        <p>Was : <%=actor[i].age%> years old</p>
+            		</li>
+        		<% } %>
+   			 </ul>
+		</main>
+	</body>
+</html>

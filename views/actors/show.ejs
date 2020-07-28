@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<header>
+			<h1><%=actor.name%></h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/actors">Actors Page</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section>
+				<%=actor.body%>
+            </section>
+            <section>
+                <form action="/actors/<%= actor._id %>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete Actor">
+                </form>
+            </section>
+        </main>
+        <section>
+            <a href="/actors/<%=actor._id%>/edit">Edit</a>
+        </section>
+	</body>
+</html>
