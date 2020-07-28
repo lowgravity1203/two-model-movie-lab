@@ -1,6 +1,22 @@
 const express = require('express');
+const mongoose = require('mongoose')
 const app = express();
 const movieControllers = require('./controllers/movies.js')
+
+
+const connectionString = 'mongodb://localhost/blog'
+
+mongoose.connect(connectionString, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+})
+
+mongoose.connection.on('connected', () => console.log(`Mongoose connected to ${connectionString}`))
+mongoose.connection.on('disconnected', () => console.log('Mongoose disconnected'))
+mongoose.connection.on('error', (err) => console.log('Mongoose error', err))
+
 
 app.use('/movies', movieControllers)
 

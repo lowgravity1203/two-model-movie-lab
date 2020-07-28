@@ -5,4 +5,8 @@ router.get('/', (req, res) => {
     res.render('index.ejs')
 })
 
+router.get('/new', (req, res) => {
+    res.render('movies/new.ejs')
+})
+
 module.exports = router
