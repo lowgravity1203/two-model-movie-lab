@@ -23,7 +23,8 @@
     		<ul>
        			 <% for(let i = 0; i < movie.length; i++){ %>
             		<li>
-                		<a href="/movies/<%=movie[i]._id%>"><%=movie[i].name%><%=movie[i].date%></a>
+                        <a href="/movies/<%=movie[i]._id%>"><%=movie[i].title%><br/></a>
+                        <p>Made in: <%=movie[i].date%></p>
             		</li>
         		<% } %>
    			 </ul>
