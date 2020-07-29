@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose')
 const app = express();
 const movieControllers = require('./controllers/movies.js')
+const actorControllers = require('./controllers/actors.js')
 const methodOverride = require('method-override')
 
 
@@ -26,6 +27,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/movies', movieControllers)
+app.use('/actor', actorControllers)
 
 app.listen(3000, ()=>{
 	console.log('listening....');
