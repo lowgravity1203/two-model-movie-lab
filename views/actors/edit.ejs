@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<header>
+			<h1>Edit <%=actor.name%>'s Info</h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/actors">Actor Page</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<h2>Actor Attributes:</h2>
+			<form action="/actors/<%=actor._id%>?_method=PUT" method="post">
+				<input type="text" name="name" value="<%=actor.name%>"/><br/>
+				<input type="text" name="age" value="<%=actor.name%>"/><br/>
+				<input type="submit" value="Update Actor"/>
+			</form>
+		</main>
+	</body>
+</html>
