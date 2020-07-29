@@ -7,8 +7,7 @@ router.get('/', (req, res) => {
     Actor.find({}, (err, foundActors) => {
         console.log(foundActors)
         res.render('actors/index.ejs', {
-            Actor: foundActors
-
+            actor: foundActors
          })
     })
 })
@@ -20,7 +19,7 @@ router.get('/new', (req, res) => {
 router.get('/:id', (req, res) => {
     Actor.findById(req.params.id, (err, foundActors)=> {
         res.render('actors/show.ejs', {
-            Actor: foundActors
+            actor: foundActors
         })
     })
 })
@@ -28,7 +27,7 @@ router.get('/:id', (req, res) => {
 router.get('/:id/edit', (req, res) => {
     Actor.findById(req.params.id, (err, foundActors) => {
         res.render('actors/edit.ejs', {
-            Actor: foundActors
+            actor: foundActors
         })
     })
 })

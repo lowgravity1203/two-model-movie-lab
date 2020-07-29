@@ -26,6 +26,7 @@ app.get('/', (req, res) => {
     res.render('index.ejs')
 })
 
+
 app.use('/movies', movieControllers)
 app.use('/actors', actorControllers)
 
